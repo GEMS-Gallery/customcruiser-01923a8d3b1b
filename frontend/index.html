@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Harley-Inspired Motorcycle Profile</title>
+    <link rel="stylesheet" href="index.css">
+</head>
+<body>
+    <header>
+        <h1>Motorcycle Profile Creator</h1>
+    </header>
+
+    <main>
+        <section id="profile-form">
+            <h2>Create Your Motorcycle Profile</h2>
+            <form id="motorcycle-form">
+                <input type="text" id="name" placeholder="Your Name" required>
+                <input type="text" id="model" placeholder="Motorcycle Model" required>
+                <input type="number" id="year" placeholder="Year" required>
+                <textarea id="description" placeholder="Description" required></textarea>
+                <button type="submit">Create Profile</button>
+            </form>
+        </section>
+
+        <section id="profile-display" style="display: none;">
+            <h2>Your Motorcycle Profile</h2>
+            <div id="profile-info"></div>
+            <button id="edit-profile">Edit Profile</button>
+        </section>
+
+        <section id="parts-form" style="display: none;">
+            <h2>Add Custom Part</h2>
+            <form id="part-form">
+                <input type="text" id="part-name" placeholder="Part Name" required>
+                <textarea id="part-description" placeholder="Part Description" required></textarea>
+                <input type="file" id="part-image" accept="image/*" required>
+                <button type="submit">Add Part</button>
+            </form>
+        </section>
+
+        <section id="parts-gallery" style="display: none;">
+            <h2>Custom Parts Gallery</h2>
+            <div id="parts-container"></div>
+        </section>
+    </main>
+
+    <footer>
+        <p>&copy; 2023 Motorcycle Profile Creator. All rights reserved.</p>
+    </footer>
+
+    <script type="module" src="index.js"></script>
+</body>
+</html>

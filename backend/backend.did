@@ -1,0 +1,25 @@
+type ProfileId = nat;
+type Profile = 
+ record {
+   description: text;
+   id: ProfileId;
+   model: text;
+   name: text;
+   year: nat;
+ };
+type PartId = nat;
+type Part = 
+ record {
+   description: text;
+   id: PartId;
+   imageUrl: text;
+   name: text;
+   profileId: ProfileId;
+ };
+service : {
+  addPart: (ProfileId, text, text, text) -> (opt PartId);
+  createProfile: (text, text, nat, text) -> (ProfileId);
+  getPartsForProfile: (ProfileId) -> (vec Part) query;
+  getProfile: (ProfileId) -> (opt Profile) query;
+  updateProfile: (ProfileId, text, text, nat, text) -> (bool);
+}
